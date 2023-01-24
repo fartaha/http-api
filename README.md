@@ -28,7 +28,7 @@ flask-app/
 ```
 ## Step2
 **Navigate** to your app directory and create and activate a virtual environment to make sure that installing libraries doesn't break your other apps:
-```
+```console
 $ python -m venv venv
 $ source venv/bin/activate
 ```
@@ -42,12 +42,12 @@ flask-app/
 ```
 ## Step3
 **Install**  Flask using:
-```shell
+```console
 $ pip instal flask
 ```
 to make sure that Flask is installed:
 call the Python prompt by typing:
-```shell
+```console
 $ python
 ```
 and then running the following:
@@ -90,14 +90,18 @@ Now we can test it whether our app works well or not:
 > **'{"a":5, "b":3}'**
 
 To do so run the following command in the shell to run the app first:
-```shell
+```console
 $ python flask-app1.py
 ```
 It should run a server on http://127.0.0.1:8000 and then you can make a JSON request like:
-```shell
+```console
 curl -X POST -H "Content-Type: application/json" -d '{"a":5, "b":3}' http://localhost:8000/sum
 ``` 
 It should show the result as a JSON output like**{"result":8}** in the shell:
-```shell
+```console
 {"result":8}
+```
+After testing your app make sure your are shutting down the server by pressing `ctrl+C`. Finally deactivate your environment using:
+```console
+$ deactivate
 ```
